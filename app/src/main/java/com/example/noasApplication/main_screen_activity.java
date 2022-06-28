@@ -227,5 +227,6 @@ public class main_screen_activity extends AppCompatActivity {
 
     public void reset_cals(View view) {
         calorie_display.setText("Daily: " + (int) og_calories);
+        calories=og_calories;
     }
 }

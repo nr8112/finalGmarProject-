@@ -198,6 +198,8 @@ public class personal_page extends AppCompatActivity implements AdapterView.OnIt
             if (null != selectedImageUri) {
                 FBRefs.storageRef.child(str_email).putFile(selectedImageUri);
             }
+            Intent main_screen= new Intent(this, main_screen_activity.class);
+            startActivity(main_screen);
 
         }
     }
