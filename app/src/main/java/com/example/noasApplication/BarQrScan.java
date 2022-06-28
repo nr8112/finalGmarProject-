@@ -124,7 +124,7 @@ public class BarQrScan extends AppCompatActivity {
     }
 
     public void add_product(View view) {
-        System.out.println("-----" + result_str);
+        //System.out.println("-----" + result_str);
         recieved_intent.putExtra("n", result_str);
         setResult(RESULT_OK, recieved_intent);
         finish();

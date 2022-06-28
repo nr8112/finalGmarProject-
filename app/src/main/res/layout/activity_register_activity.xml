@@ -173,7 +173,7 @@
             android:layout_height="0px"
             android:layout_weight="5"
             android:onClick="submitRegister"
-            android:text="Button" />
+            android:text="register" />
 
         <Space
             android:layout_width="match_parent"
