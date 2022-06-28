@@ -43,8 +43,8 @@ public class RecipePage extends AppCompatActivity {
             public void onDataChange(DataSnapshot dS) {
 
                 for(DataSnapshot data : dS.getChildren()) {
-                    System.out.println(data.getKey() + "," + key);
-                    if (data.getKey().equals(key)){
+                    // System.out.println(data.getKey() + "," + key);
+                    if (data.getKey().equals(key)){ //רץ על כל המתכונים אם הID של המתכון תואם אז מציגים את המיטע הנל
                         str_name = data.child("name").getValue().toString();
                         str_cal = data.child("cal").getValue().toString();
                         str_description = data.child("description").getValue().toString();
@@ -61,7 +61,7 @@ public class RecipePage extends AppCompatActivity {
                 topping.setText("Topping: " + str_topping);
             }
             @Override
-            public void onCancelled(DatabaseError databaseError) { }
+            public void onCancelled(DatabaseError databaseError) { } //  otomty-אוטומטי
         };
         refRecipes.addValueEventListener(stuListener);
 

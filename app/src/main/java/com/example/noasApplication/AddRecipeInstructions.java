@@ -119,7 +119,7 @@ public class AddRecipeInstructions extends AppCompatActivity {
         if (!valid_instructions()) str_errors += "There must be at least one instruction.\n";
         if (!valid_topping()) str_topping += "\n";
         errors.setText(str_errors);
-        if (str_errors == ""){
+        if (str_errors == ""){ // בונה ענף בפיירבייס  build
             next_key = Recipes.size();
             String key = String.valueOf(next_key);
             refRecipes.child(key).setValue("");
@@ -130,11 +130,10 @@ public class AddRecipeInstructions extends AppCompatActivity {
             refRecipes.child(key).child("description").setValue(str_description);
             refRecipes.child(key).child("ingredients").setValue("");
             for (int i = 0; i < ingredients_ids_list.length; i++){
-                refRecipes.child(key).child("ingredients").child(String.valueOf(i)).setValue(ingredients_ids_list[i] + " (" + grams[i] + " g)");
+                refRecipes.child(key).child("ingredients").child(String.valueOf(i)).setValue(ingredients_list[i] + " (" + grams[i] + " g)");
             }
             refRecipes.child(key).child("instructions").setValue(str_instructions);
             refRecipes.child(key).child("topping").setValue(str_topping);
-            refUsers.child(String.valueOf(current_user.getId())).child("recipes").child(key).setValue(" ");
             startActivity(main);
         }
     }

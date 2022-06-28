@@ -130,9 +130,10 @@ public class ChooseProduct extends AppCompatActivity implements AdapterView.OnIt
     protected void onActivityResult(int source, int good, @Nullable Intent data_back) {
         super.onActivityResult(source, good, data_back);
         if (data_back != null) {
-            id_back = data_back.getStringExtra("n");
+            id_back = data_back.getStringExtra("id");
             if (!id_back.equals("-1")){
                 chosen_products_ids.add(id_back);
+                chosen_products_names.add(data_back.getStringExtra("name")); //מוסיף לרשימת שמות את המוצר שנסרק
                 show_products();
                 FBRefs.refProducts.addValueEventListener(stuListener);
             }

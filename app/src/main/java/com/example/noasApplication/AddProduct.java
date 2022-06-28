@@ -121,7 +121,8 @@ public class AddProduct extends AppCompatActivity {
             FBRefs.refProducts.child(key).child("fats").setValue(str_fats);
             FBRefs.refProducts.child(key).child("prot").setValue(str_prot);
             // add product to recipe
-            choose_product.putExtra("n", key);
+            choose_product.putExtra("id", key);
+            choose_product.putExtra("name", str_name + "(" + str_cal + ")");
             setResult(RESULT_OK, choose_product);
             // back
             finish();

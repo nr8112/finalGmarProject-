@@ -43,7 +43,7 @@
 
             <Button
                 android:id="@+id/button11"
-                android:layout_width="0dp"
+                android:layout_width="59dp"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
                 android:onClick="update_results"
@@ -70,7 +70,7 @@
             <Switch
                 android:id="@+id/kosher_switch"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="50"
                 android:gravity="center"
                 android:text="Kosher" />

@@ -124,15 +124,22 @@ public class BarQrScan extends AppCompatActivity {
     }
 
     public void add_product(View view) {
-        //System.out.println("-----" + result_str);
-        recieved_intent.putExtra("n", result_str);
+        //System.out.println("-----" + result_str); bdika -בדיקה
+        recieved_intent.putExtra("id", result_str);
+        recieved_intent.putExtra("name", product_names.get(indexx) + "(-)");
         setResult(RESULT_OK, recieved_intent);
+        if (stuListener!=null) { //mafsik at h Listener
+            FBRefs.refProducts.removeEventListener(stuListener);
+        }
         finish();
     }
 
     public void back(View view) {
         recieved_intent.putExtra("n", "-1");
         setResult(RESULT_OK, recieved_intent);
+        if (stuListener!=null) { //mafsik at h Listener
+            FBRefs.refProducts.removeEventListener(stuListener);
+        }
         finish();
     }
 

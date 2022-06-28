@@ -28,7 +28,7 @@
             android:layout_height="0dp"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="Welcome to Yummy"
+            android:text="Welcome to Eatwell"
             android:textSize="20sp" />
 
         <TextView

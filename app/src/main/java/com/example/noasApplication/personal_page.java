@@ -74,20 +74,21 @@ public class personal_page extends AppCompatActivity implements AdapterView.OnIt
         age.setText("" + current_user.getAge());
         weight.setText("" + current_user.getWeight());
         height.setText("" + current_user.getHeight());
-        gender.setSelection(current_user.getGender());
-        activity_level.setSelection(current_user.getActivity_level());
         location.setText(current_user.getLocation());
 
 
         gender.setOnItemSelectedListener(this);
         ArrayAdapter<String> gender_adp = new ArrayAdapter<String>(this,
-                R.layout.support_simple_spinner_dropdown_item,sex_options);
+                R.layout.support_simple_spinner_dropdown_item,sex_options); //sex_options רשימה פנימית  reshima pnimit
         gender.setAdapter(gender_adp);
 
         activity_level.setOnItemSelectedListener(this);
         ArrayAdapter<String> activity_adp = new ArrayAdapter<String>(this,
-                R.layout.support_simple_spinner_dropdown_item,activity_options);
+                R.layout.support_simple_spinner_dropdown_item,activity_options);// activity_options רשימה פנימית  reshima pnimit
         activity_level.setAdapter(activity_adp);
+
+        gender.setSelection(current_user.getGender());
+        activity_level.setSelection(current_user.getActivity_level());
 
         usersEmails = new ArrayList();
 
